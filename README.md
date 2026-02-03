@@ -25,6 +25,7 @@ A detailed exploration of the parallel brain and orchestrated workforce is avail
 * **Agentic Flow Simulation:** A real-time Canvas-based simulation where you can generate "ideas" and toggle AI agents to see how they prevent mental queue overflow and burnout.  
 * **Exponential Growth Tracker:** Data visualization of the AI enablement curve over the last 12-18 months.  
 * **Bilingual Interface:** Full support for English and Polish (PL/EN toggle).
+* **Audio Output:** Text-to-Speech integration for listening to the research paper in both languages.
 
 ### **💻 Tech Stack**
 
@@ -51,12 +52,18 @@ Ten projekt pokazuje, jak systemy wieloagentowe działają jako zewnętrzna **Wa
 
 Zobacz interaktywną symulację i wizualizację danych na żywo przez GitHub Pages: [**Zobacz Interaktywny Raport**](https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity)
 
+### **📄 Artykuł Badawczy**
+
+Szczegółowa analiza równoległego mózgu i orkiestrowanej siły roboczej jest dostępna tutaj:
+[**Czytaj Pełny Artykuł (Tryb Neuroinkluzywny)**](./docs/paper_pl.md)
+
 ### **🛠 Główne Funkcje**
 
 * **Wizualizator Tarcia Poznawczego:** Interaktywne wykresy porównujące prędkość tradycyjnej pracy, ideacji osób neuroróżnorodnych oraz egzekucji wspieranej przez AI.  
 * **Symulacja Przepływu Agentycznego:** Symulacja w czasie rzeczywistym (Canvas API), w której można generować „pomysły” i włączać agenty AI, aby zobaczyć, jak zapobiegają przeładowaniu mentalnemu i wypaleniu.  
 * **Śledzenie Wzrostu Wykładniczego:** Wizualizacja danych dotycząca krzywej rozwoju technologii wspierających w ciągu ostatnich 12-18 miesięcy.  
 * **Interfejs Dwujęzyczny:** Pełne wsparcie dla języka angielskiego i polskiego (przełącznik PL/EN).
+* **Wersja Audio:** Integracja Text-to-Speech pozwalająca na odsłuchanie artykułu w obu językach.
 
 ### **💻 Stos Technologiczny**
 
