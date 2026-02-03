@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const article = document.getElementById('article-content');
 
     if (!article || !window.speechSynthesis) {
-        document.querySelector('.audio-player-container').style.display = 'none';
+        const container = document.querySelector('.audio-player-container');
+        if (container) container.style.display = 'none';
         return;
     }
 
@@ -13,28 +14,43 @@ document.addEventListener('DOMContentLoaded', () => {
     let utterance = null;
     let isPlaying = false;
     let isPaused = false;
+    let keepAliveInterval = null;
 
     // Get text content, clean up Markdown quirks if any remain in textContent
-    // We traverse purely text nodes to avoid reading hidden elements or scripts
     function getReadableText(element) {
-        let text = "";
-        // Simple strategy: use innerText which approximates rendered text well
-        text = element.innerText;
-
+        let text = element.innerText;
         // Remove citations like [1], [2] etc.
         text = text.replace(/\[\d+\]/g, '');
         // Remove image alt text placeholders
         text = text.replace(/!\[.*?\]/g, '');
-
         return text;
     }
 
     const fullText = getReadableText(article);
 
     // Split into chunks because some browsers limit utterance length
-    // We'll split by paragraphs/periods for natural pauses
+    // Split by sentences for natural pauses
     const chunks = fullText.match(/[^.!?]+[.!?]+/g) || [fullText];
     let currentChunkIndex = 0;
+
+    // Chrome has a bug where speech synthesis stops after ~15 seconds of "inactivity"
+    // This keep-alive timer works around it by periodically pausing and resuming
+    function startKeepAlive() {
+        stopKeepAlive();
+        keepAliveInterval = setInterval(() => {
+            if (synth.speaking && !isPaused) {
+                synth.pause();
+                synth.resume();
+            }
+        }, 5000); // Every 5 seconds
+    }
+
+    function stopKeepAlive() {
+        if (keepAliveInterval) {
+            clearInterval(keepAliveInterval);
+            keepAliveInterval = null;
+        }
+    }
 
     function setupUtterance(textIndex) {
         if (textIndex >= chunks.length) {
@@ -46,12 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const u = new SpeechSynthesisUtterance(text);
 
         // Language selection
-        // Polish: pl-PL, English: en-US or en-GB
         u.lang = window.PAGE_LANG === 'pl' ? 'pl-PL' : 'en-US';
 
         // Select a voice if possible
         const voices = synth.getVoices();
-        // Try to find a "Google" voice or "Microsoft" voice which are usually better
         const preferredVoice = voices.find(v => v.lang.includes(u.lang) && (v.name.includes('Google') || v.name.includes('Neural')));
         if (preferredVoice) {
             u.voice = preferredVoice;
@@ -69,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         u.onerror = (e) => {
             console.error('Speech synthesis error', e);
-            // Try next chunk if one fails
             currentChunkIndex++;
             if (isPlaying) {
                 setupUtterance(currentChunkIndex);
@@ -89,20 +102,22 @@ document.addEventListener('DOMContentLoaded', () => {
             isPaused = false;
         } else {
             console.log("New utterance...");
-            synth.cancel(); // Clear any existing queue
+            synth.cancel();
             currentChunkIndex = 0;
             setupUtterance(currentChunkIndex);
         }
         isPlaying = true;
         updateIcon(true);
+        startKeepAlive();
     }
 
     function pauseAudio() {
         if (synth.speaking && !isPaused) {
             synth.pause();
             isPaused = true;
-            isPlaying = true; // Still technically in a playback session
+            isPlaying = true;
             updateIcon(false);
+            stopKeepAlive();
         }
     }
 
@@ -113,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentChunkIndex = 0;
         updateIcon(false);
         updateStatus(true);
+        stopKeepAlive();
     }
 
     function updateIcon(playing) {
@@ -127,10 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateStatus(reset = false) {
         if (reset) {
-            audioStatus.textContent = "0% / 100%";
+            audioStatus.textContent = "0:00 / --:--";
             return;
         }
-        // Rough estimate of progress
         const percent = Math.round((currentChunkIndex / chunks.length) * 100);
         audioStatus.textContent = (window.PAGE_LANG === 'pl' ? "Czytanie: " : "Reading: ") + percent + "%";
     }
@@ -151,8 +166,21 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // Stop audio on nav away
-    window.onbeforeunload = () => {
-        synth.cancel();
-    };
+    // Stop audio on any navigation away from the page
+    window.addEventListener('beforeunload', () => {
+        stopAudio();
+    });
+
+    // Also handle visibility change (tab switch, minimize)
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden && isPlaying && !isPaused) {
+            // Page is hidden, stop to prevent lingering audio
+            stopAudio();
+        }
+    });
+
+    // Handle page hide event for better mobile/SPA support
+    window.addEventListener('pagehide', () => {
+        stopAudio();
+    });
 });
