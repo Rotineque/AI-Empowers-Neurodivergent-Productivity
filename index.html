@@ -229,7 +229,9 @@
                 document.getElementById('nav-friction').textContent = t.nav_friction;
                 document.getElementById('nav-layer').textContent = t.nav_layer;
                 document.getElementById('nav-growth').textContent = t.nav_growth;
-                document.getElementById('nav-paper').textContent = t.nav_paper;
+                const navPaper = document.getElementById('nav-paper');
+                navPaper.textContent = t.nav_paper;
+                navPaper.href = state.lang === 'PL' ? 'docs/paper_pl.html' : 'docs/paper.html';
                 document.getElementById('label-summary').textContent = t.label_summary;
                 document.getElementById('title-friction').textContent = t.title_friction;
                 document.getElementById('desc-friction').textContent = t.desc_friction;

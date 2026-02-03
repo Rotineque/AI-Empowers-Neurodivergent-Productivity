@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ " /assets/css/style.css" | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="{{ " /assets/js/audio-player.js" | relative_url }}" defer></script>
+    <style>
+        /* Base Layout structure to mimic minimal theme but with control */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #fafafa;
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #eaeaea;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .home-link {
+            font-weight: 700;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        /* Audio Player Styles */
+        .audio-player-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+            border: 1px solid #eee;
+            transition: transform 0.3s ease;
+        }
+
+        .audio-player-container.minimized {
+            transform: translateX(calc(100% - 50px));
+        }
+
+        .play-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: #008080;
+            /* Teal to match main site */
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: background 0.2s;
+        }
+
+        .play-btn:hover {
+            background: #006666;
+        }
+
+        .audio-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .audio-title {
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .audio-status {
+            font-size: 0.7rem;
+            color: #666;
+        }
+
+        /* Readability overrides */
+        article {
+            font-size: 1.125rem;
+            /* 18px */
+            line-height: 1.8;
+            color: #2d2d2d;
+            /* Soft black */
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #111;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* AuDHD Friendly Formatting */
+        blockquote {
+            border-left: 4px solid #008080;
+            margin: 1.5em 0;
+            padding-left: 1em;
+            background: #f0fdfa;
+            /* Light teal bg */
+            padding: 1em;
+            border-radius: 0 8px 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .lang-switch-btn {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="{{ " /" | relative_url }}" class="home-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>{% if page.lang == 'pl' %}Powrót do Demo{% else %}Back to Demo{% endif %}</span>
+        </a>
+        <div class="controls">
+            {% if page.lang == 'pl' %}
+            <a href="paper.html" class="lang-switch-btn">🇬🇧 English</a>
+            {% else %}
+            <a href="paper_pl.html" class="lang-switch-btn">🇵🇱 Polski</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <main>
+        <article id="article-content">
+            {{ content }}
+        </article>
+    </main>
+
+    <!-- Audio Player Widget -->
+    <div class="audio-player-container">
+        <button id="playConfigBtn" class="play-btn" aria-label="Play/Pause">
+            <i class="fas fa-play" id="playIcon"></i>
+        </button>
+        <div class="audio-info">
+            <span class="audio-title">{% if page.lang == 'pl' %}Odsłuchaj artykuł{% else %}Listen to article{% endif
+                %}</span>
+            <span id="audioStatus" class="audio-status">0:00 / --:--</span>
+        </div>
+    </div>
+
+    <script>
+        // Pass language to JS
+        window.PAGE_LANG = "{{ page.lang | default: 'en' }}";
+    </script>
+
+</body>
+
+</html>
