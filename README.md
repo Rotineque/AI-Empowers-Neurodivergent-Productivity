@@ -17,7 +17,7 @@ Experience the interactive simulation and data visualization live on GitHub Page
 ### **📄 Research Paper**
 
 A detailed exploration of the parallel brain and orchestrated workforce is available here:
-[**Read the Full Paper (Neuro-Inclusive Mode)**](./docs/paper.md)
+[**Read the Full Paper (Neuro-Inclusive Mode)**](https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity/docs/paper.html)
 
 ### **🛠 Key Features**
 
@@ -55,7 +55,7 @@ Zobacz interaktywną symulację i wizualizację danych na żywo przez GitHub Pag
 ### **📄 Artykuł Badawczy**
 
 Szczegółowa analiza równoległego mózgu i orkiestrowanej siły roboczej jest dostępna tutaj:
-[**Czytaj Pełny Artykuł (Tryb Neuroinkluzywny)**](./docs/paper_pl.md)
+[**Czytaj Pełny Artykuł (Tryb Neuroinkluzywny)**](https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity/docs/paper_pl.html)
 
 ### **🛠 Główne Funkcje**
 
