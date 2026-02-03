@@ -12,7 +12,7 @@ This project demonstrates how multi-agent systems act as an external **Executive
 
 ### **🚀 Live Demo**
 
-Experience the interactive simulation and data visualization live on GitHub Pages: [**View Live Interactive Report**](https://www.google.com/search?q=https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity/)
+Experience the interactive simulation and data visualization live on GitHub Pages: [**View Live Interactive Report**](https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity/)
 
 ### **🛠 Key Features**
 
@@ -44,7 +44,7 @@ Ten projekt pokazuje, jak systemy wieloagentowe działają jako zewnętrzna **Wa
 
 ### **🚀 Demo na Żywo**
 
-Zobacz interaktywną symulację i wizualizację danych na żywo przez GitHub Pages: [**Zobacz Interaktywny Raport**](https://www.google.com/search?q=https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity/)
+Zobacz interaktywną symulację i wizualizację danych na żywo przez GitHub Pages: [**Zobacz Interaktywny Raport**](https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity)
 
 ### **🛠 Główne Funkcje**
 
