@@ -29,6 +29,12 @@ You can view the interactive SPA (Single Page Application) directly via GitHub P
 
 **EN:** Agentic AI mirrors the rapid processing speed of the AuDHD brain, handling execution to prevent burnout and unlocking a powerhouse of productivity.
 
-**PL:** Agentyczna sztuczna inteligencja dorównuje szybkością działania mózgom osób z ADHD i autyzmem, przejmując realizację zadań, co zapobiega wypaleniu i uwalnia ogromny potencjał produktywności.
+**PL:** AI Wspiera Produktywność Osób Neuroróżnorodnych 🧠⚡️
+
+Interaktywna analiza tego, jak rozwijający się ekosystem AI, a konkretnie Agentyczna Sztuczna Inteligencja, dopasowuje się do szybkości przetwarzania mózgu AuDHD (Autyzm + ADHD), aby odblokować bezprecedensową produktywność.
+
+Wizja
+
+Przez lata „tarcie poznawcze” między szybkim tworzeniem pomysłów przez osoby neuroróżnorodne a powolną, liniową realizacją w świecie zewnętrznym prowadziło do wypalenia. Ten projekt pokazuje, jak autonomiczni agenci działają jako zewnętrzna warstwa „funkcji wykonawczych”, pozwalając osobom neuroróżnorodnym pozostać w stanie flow.
 
 *Created to discuss and research the intersection of Neurodiversity and the current AI expansion.*
