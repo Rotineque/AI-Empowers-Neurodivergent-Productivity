@@ -82,10 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startAudio() {
+        console.log("Starting Audio...");
         if (synth.speaking && isPaused) {
+            console.log("Resuming...");
             synth.resume();
             isPaused = false;
         } else {
+            console.log("New utterance...");
             synth.cancel(); // Clear any existing queue
             currentChunkIndex = 0;
             setupUtterance(currentChunkIndex);
@@ -133,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     playBtn.onclick = () => {
+        console.log("Play button clicked");
         if (isPlaying && !isPaused) {
             pauseAudio();
         } else {
