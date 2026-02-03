@@ -172,6 +172,73 @@
             text-decoration: none;
             color: #555;
         }
+
+        /* DARK MODE OVERRIDES */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1b1e !important;
+            }
+
+            header {
+                background: #1a1b1e;
+                border-bottom: 1px solid #2d2d2d;
+            }
+
+            .home-link {
+                color: #e5e7eb;
+            }
+
+            article {
+                color: #e5e7eb;
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #fff;
+            }
+
+            a {
+                color: #60a5fa;
+            }
+
+            blockquote {
+                background: #112a2e;
+                color: #e5e7eb;
+            }
+
+            th {
+                background-color: #2d2d2d;
+                color: #fff;
+            }
+
+            td {
+                border-bottom: 1px solid #2d2d2d;
+                color: #e5e7eb;
+            }
+
+            .audio-player-container {
+                background: #25262b;
+                border: 1px solid #2d2d2d;
+            }
+
+            .audio-title {
+                color: #fff;
+            }
+
+            .audio-status {
+                color: #adb5bd;
+            }
+
+            .lang-switch-btn {
+                border-color: #444;
+                color: #ccc;
+            }
+
+            .lang-switch-btn:hover {
+                background: #2d2d2d;
+            }
+        }
     </style>
 </head>
 
