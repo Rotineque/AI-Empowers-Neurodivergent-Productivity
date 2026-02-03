@@ -1,40 +1,69 @@
 # **AI Empowers Neurodivergent Productivity 🧠⚡️**
 
-An interactive exploration of how the expanding AI ecosystem, specifically **Agentic AI**, matches the parallel processing speed of the AuDHD (Autism \+ ADHD) brain to unlock unprecedented productivity.
+### **Bridging the gap between AuDHD Ideation and Real-World Execution**
 
-## **The Vision**
+## **\[EN\] English Version**
 
-For years, the "Cognitive Friction" between rapid neurodivergent ideation and slow, linear world execution has led to burnout. This project demonstrates how multiple autonomous agents act as an external "executive function" layer, allowing neurodivergent individuals to stay in flow and execute on ideas as fast as they can think them.
+### **🌟 The Vision**
 
-## **🚀 Live Demo**
+The current AI ecosystem, specifically the rise of **Agentic AI**, is creating a historical shift in accessibility for neurodivergent individuals (ADHD and Autism). For decades, the primary hurdle for the "AuDHD" brain has been **Cognitive Friction**: the exhausting gap between the rapid, parallel processing speed of the mind and the slow, linear nature of traditional work environments.
 
-You can view the interactive SPA (Single Page Application) directly via GitHub Pages:
+This project demonstrates how multi-agent systems act as an external **Executive Function Layer**, allowing users to delegate the "how" of execution so they can focus on the "what" of innovation.
 
-[**View Live Interactive Report**](https://www.google.com/url?sa=E&source=gmail&q=https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity/)
+### **🚀 Live Demo**
 
-## **Key Features**
+Experience the interactive simulation and data visualization live on GitHub Pages: [**View Live Interactive Report**](https://www.google.com/search?q=https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity/)
 
-* **Cognitive Friction Visualizer:** Data visualization of the gap between ideation and execution.  
-* **Agentic Flow Simulation:** An interactive canvas simulation where you can toggle AI agents to see how they prevent "mental queue" overflow and burnout.  
-* **Exponential Growth Tracker:** A look at the rapid advancement of accessibility tech over the last 12 months.
+### **🛠 Key Features**
 
-## **Tech Stack**
+* **Cognitive Friction Visualizer:** Interactive charts comparing traditional work speeds vs. neurodivergent ideation vs. AI-augmented execution.  
+* **Agentic Flow Simulation:** A real-time Canvas-based simulation where you can generate "ideas" and toggle AI agents to see how they prevent mental queue overflow and burnout.  
+* **Exponential Growth Tracker:** Data visualization of the AI enablement curve over the last 12-18 months.  
+* **Bilingual Interface:** Full support for English and Polish (PL/EN toggle).
 
-* **Frontend:** HTML5, Tailwind CSS  
-* **Visualizations:** Chart.js  
-* **Simulations:** Vanilla JavaScript (Canvas API)  
-* **Architecture:** Single Page Application (SPA)
+### **💻 Tech Stack**
 
-## **Summary (EN/PL)**
+* **Architecture:** Single Page Application (SPA).  
+* **Styling:** Tailwind CSS (Responsive Design).  
+* **Visuals:** Chart.js for data analytics.  
+* **Simulation:** Vanilla JavaScript with Canvas API.
 
-**EN:** Agentic AI mirrors the rapid processing speed of the AuDHD brain, handling execution to prevent burnout and unlocking a powerhouse of productivity.
+### **📥 Quick Setup**
 
-**PL:** AI Wspiera Produktywność Osób Neuroróżnorodnych 🧠⚡️
+1. Clone the repository.  
+2. Open index.html in any modern web browser.  
+3. To deploy to GitHub Pages, go to Settings \> Pages and select the main branch.
 
-Interaktywna analiza tego, jak rozwijający się ekosystem AI, a konkretnie Agentyczna Sztuczna Inteligencja, dopasowuje się do szybkości przetwarzania mózgu AuDHD (Autyzm + ADHD), aby odblokować bezprecedensową produktywność.
+## **\[PL\] Polska Wersja**
 
-Wizja
+### **🌟 Wizja Projektu**
 
-Przez lata „tarcie poznawcze” między szybkim tworzeniem pomysłów przez osoby neuroróżnorodne a powolną, liniową realizacją w świecie zewnętrznym prowadziło do wypalenia. Ten projekt pokazuje, jak autonomiczni agenci działają jako zewnętrzna warstwa „funkcji wykonawczych”, pozwalając osobom neuroróżnorodnym pozostać w stanie flow.
+Obecny ekosystem AI, a w szczególności rozwój **Agentycznej Sztucznej Inteligencji**, tworzy historyczną zmianę w dostępności dla osób neuroróżnorodnych (ADHD i Autyzm). Przez dziesięciolecia główną przeszkodą dla mózgu "AuDHD" było **Tarcie Poznawcze** (Cognitive Friction): wyczerpująca luka między szybkim, równoległym przetwarzaniem myśli a powolną, liniową naturą tradycyjnych środowisk pracy.
 
-*Created to discuss and research the intersection of Neurodiversity and the current AI expansion.*
+Ten projekt pokazuje, jak systemy wieloagentowe działają jako zewnętrzna **Warstwa Funkcji Wykonawczych**, pozwalając użytkownikom delegować "sposób" realizacji, aby mogli skupić się na "istocie" innowacji.
+
+### **🚀 Demo na Żywo**
+
+Zobacz interaktywną symulację i wizualizację danych na żywo przez GitHub Pages: [**Zobacz Interaktywny Raport**](https://www.google.com/search?q=https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity/)
+
+### **🛠 Główne Funkcje**
+
+* **Wizualizator Tarcia Poznawczego:** Interaktywne wykresy porównujące prędkość tradycyjnej pracy, ideacji osób neuroróżnorodnych oraz egzekucji wspieranej przez AI.  
+* **Symulacja Przepływu Agentycznego:** Symulacja w czasie rzeczywistym (Canvas API), w której można generować „pomysły” i włączać agenty AI, aby zobaczyć, jak zapobiegają przeładowaniu mentalnemu i wypaleniu.  
+* **Śledzenie Wzrostu Wykładniczego:** Wizualizacja danych dotycząca krzywej rozwoju technologii wspierających w ciągu ostatnich 12-18 miesięcy.  
+* **Interfejs Dwujęzyczny:** Pełne wsparcie dla języka angielskiego i polskiego (przełącznik PL/EN).
+
+### **💻 Stos Technologiczny**
+
+* **Architektura:** Single Page Application (SPA).  
+* **Stylizacja:** Tailwind CSS (Responsive Design).  
+* **Wizualizacje:** Chart.js do analityki danych.  
+* **Symulacja:** Vanilla JavaScript z wykorzystaniem Canvas API.
+
+### **📥 Szybka Konfiguracja**
+
+1. Sklonuj repozytorium.  
+2. Otwórz plik index.html w dowolnej nowoczesnej przeglądarce.  
+3. Aby opublikować na GitHub Pages, przejdź do Settings \> Pages i wybierz gałąź main.
+
+*Created by Rotineque \- Researching the intersection of Neurodiversity and AI.*
