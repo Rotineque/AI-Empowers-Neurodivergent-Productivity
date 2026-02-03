@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ " /assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="{{ " /assets/js/audio-player.js" | relative_url }}" defer></script>
+    <script src="{{ "/assets/js/audio-player.js" | relative_url }}" defer></script>
     <style>
         /* Base Layout structure to mimic minimal theme but with control */
         body {
@@ -246,7 +246,7 @@
 <body>
 
     <header>
-        <a href="{{ " /" | relative_url }}" class="home-link">
+        <a href="{{ "/" | relative_url }}" class="home-link">
             <i class="fas fa-arrow-left"></i>
             <span>{% if page.lang == 'pl' %}Powrót do Demo{% else %}Back to Demo{% endif %}</span>
         </a>
