@@ -1,17 +1,43 @@
----
----
+--- --- @import "{{ site.theme }}";
 
-@import "{{ site.theme }}";
+:root {
+  --bg-color: #fafafa;
+  --text-color: #333333;
+  --link-color: #0066cc;
+  --blockquote-bg: #f0fdfa;
+  --border-color: #eaeaea;
+  --header-bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1b1e;
+    /* Soft dark grey, not pure black */
+    --text-color: #e5e7eb;
+    /* Soft off-white */
+    --link-color: #60a5fa;
+    --blockquote-bg: #112a2e;
+    --border-color: #2d2d2d;
+    --header-bg: #1a1b1e;
+  }
+}
 
 body {
-  color: #333333 !important;
-  background-color: #fafafa !important; /* Off-white */
+  color: var(--text-color) !important;
+  background-color: var(--bg-color) !important;
   line-height: 1.6 !important;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, system-ui; /* Readable sans-serif */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, system-ui;
 }
 
 /* Ensure left alignment, avoid justified */
-p, li, h1, h2, h3, h4, h5, h6 {
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-align: left !important;
 }
 
@@ -20,11 +46,11 @@ p, li, h1, h2, h3, h4, h5, h6 {
 
 /* Container width for readability */
 .wrapper {
-    max-width: 800px;
+  max-width: 800px;
 }
 
 /* Links - distinguishable but not jarring */
 a {
-    color: #0066cc;
-    text-decoration: underline;
+  color: var(--link-color);
+  text-decoration: underline;
 }
