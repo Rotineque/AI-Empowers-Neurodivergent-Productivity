@@ -14,6 +14,11 @@ This project demonstrates how multi-agent systems act as an external **Executive
 
 Experience the interactive simulation and data visualization live on GitHub Pages: [**View Live Interactive Report**](https://rotineque.github.io/AI-Empowers-Neurodivergent-Productivity/)
 
+### **📄 Research Paper**
+
+A detailed exploration of the parallel brain and orchestrated workforce is available here:
+[**Read the Full Paper (Neuro-Inclusive Mode)**](./docs/paper.md)
+
 ### **🛠 Key Features**
 
 * **Cognitive Friction Visualizer:** Interactive charts comparing traditional work speeds vs. neurodivergent ideation vs. AI-augmented execution.  

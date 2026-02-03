@@ -1,0 +1,30 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body {
+  color: #333333 !important;
+  background-color: #fafafa !important; /* Off-white */
+  line-height: 1.6 !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, system-ui; /* Readable sans-serif */
+}
+
+/* Ensure left alignment, avoid justified */
+p, li, h1, h2, h3, h4, h5, h6 {
+  text-align: left !important;
+}
+
+/* Calm Mode tweaks - reducing some contrast/clutter if possible, 
+   but globally applying the requested colors is the main step. */
+
+/* Container width for readability */
+.wrapper {
+    max-width: 800px;
+}
+
+/* Links - distinguishable but not jarring */
+a {
+    color: #0066cc;
+    text-decoration: underline;
+}
